@@ -1,73 +1,82 @@
 // Sækja config
 // Allir stílar fyrir events
-@import "./config";
+@import './config';
 
 .events {
+  margin-bottom: 2rem;
+
+  .col {
     margin-bottom: 2rem;
-    .col {
-        margin-bottom: 2rem;
-    }
   }
-  
+}
+
 .event {
-  position: relative;
-  width: 100%;
+  background-color: $lightgray;
   height: 100%;
   min-height: 250px;
-  background-color: $lightgray;
+  position: relative;
+  width: 100%;
   word-break: break-word;
+
   h3 {
     margin-bottom: 1rem;
   }
+
   p {
+    font-style: italic;
     margin-bottom: 1rem;
-    font-style: italic;  
   }
+
   ul {
+    font-style: italic;
     list-style: none;
-    font-style: italic; 
   }
+
   .card {
-    position: absolute;
+    bottom: 0;
     display: flex;
-    left: 0; right: 0; top: 0; bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     transform-style: preserve-3d;
-    transition: $trans; 
+    transition: $trans;
   }
+
   .face {
+    backface-visibility: hidden;
+    height: 100%;
+    padding: 0.5rem;
     position: absolute;
     width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    padding: 0.5rem;
   }
+
   .front {
-      display:flex;
+    display: flex;
   }
+
   .back {
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-between;
   }
 }
-  
-  .event:last-child {
-    margin-right: 0;
-  }
-  
-  .event:hover .card {
-    transform: rotateY(180deg);
-  }
-  
 
-  .event .face.back {
-    transform: rotateY(180deg);
-  }
-  
-  .event .front h3 {
-    margin: auto;
-    font-size: 2em;
-    text-align: center;
-  }
-  
+.event:last-child {
+  margin-right: 0;
+}
+
+.event:hover .card {
+  transform: rotateY(180deg);
+}
+
+.event .face.back {
+  transform: rotateY(180deg);
+}
+
+.event .front h3 {
+  font-size: 2em;
+  margin: auto;
+  text-align: center;
+}
