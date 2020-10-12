@@ -1,0 +1,32 @@
+{
+  "name": "vef1-2020-v6",
+  "version": "1.0.0",
+  "description": "verk6",
+  "main": "index.js",
+  "scripts": {
+    "browser-sync": "browser-sync start --server",
+    "sass": "node-sass styles.scss styles.css",
+    "dev": "concurrently npm:sass npm:browser-sync",
+    "lint": "stylelint styles.scss ./*/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndriFreyrV/vef1-2020-v6.git"
+  },
+  "author": "AndriFreyrV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndriFreyrV/vef1-2020-v6/issues"
+  },
+  "homepage": "https://github.com/AndriFreyrV/vef1-2020-v6#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "concurrently": "^5.3.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-sass-guidelines": "^7.1.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
